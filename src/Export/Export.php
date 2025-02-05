@@ -4,9 +4,9 @@ namespace Qs\TopButton\Export;
 
 use AntdAdmin\Component\Table\ActionType\BaseAction;
 use Illuminate\Support\Str;
-use Qscmf\Builder\Antd\BuilderAdapter\ListAdapter\IAntdTableButton;
 use Qscmf\Builder\ButtonType\ButtonType;
 use Qscmf\Builder\ListBuilder;
+use Quansitech\BuilderAdapterForAntdAdmin\BuilderAdapter\ListAdapter\IAntdTableButton;
 use Think\View;
 
 class Export extends ButtonType implements IAntdTableButton
