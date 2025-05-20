@@ -2,10 +2,13 @@
 
 namespace Qs\TopButton\Export;
 
+use Closure;
+
 trait ExportExcelByXlsx
 {
+    abstract public function export();
 
-    protected function exportExcelByXlsx(\Closure $genExcelList)
+    protected function exportExcelByXlsx(Closure $genExcelList)
     {
         $page = I('get.page');
         $rownum = I('get.rownum');
@@ -48,7 +51,7 @@ trait ExportExcelByXlsx
                 $new_list[$name_item] = $data[$name_key];
             });
             if (isset($data['_cellProperties'])) {
-                $new_list['_cellProperties'] = $this->transcodeOneCellProperties($data['_cellProperties'], $header_mapping);;
+                $new_list['_cellProperties'] = $this->transcodeOneCellProperties($data['_cellProperties'], $header_mapping);
             }
             return $new_list;
         })->toArray();
