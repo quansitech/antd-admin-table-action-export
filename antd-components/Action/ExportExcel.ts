@@ -234,7 +234,8 @@ ExportExcel.prototype.fetchFun = function (page, streamRownum, type, index) {
             }
         }
     }).catch(function (e) {
-        console.log(e);
+        obj.options.error && typeof obj.options.error == 'function' && obj.options.error('请求失败：'+e.message);
+        throw e
     });
 }
 

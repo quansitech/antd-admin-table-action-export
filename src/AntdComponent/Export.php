@@ -12,7 +12,7 @@ class Export extends BaseAction
         $this->render_data['export']['pageNum'] = 100;
         $this->render_data['export']['url'] = U('export');
         $this->render_data['export']['filename'] = date('Ymd') . '导出';
-        $this->render_data['export']['cols'] = null;
+        $this->render_data['export']['cols'] = [];
     }
 
     protected function getType()

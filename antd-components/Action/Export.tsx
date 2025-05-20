@@ -70,7 +70,7 @@ export default function (props: {
                 setBtnTitle(progress)
             },
             'error': function (info) {
-                global.message.error(info);
+                global.message.error({content: info});
                 setLoading(false)
                 setBtnTitle(props.title);
             }
