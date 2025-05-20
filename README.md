@@ -5,7 +5,7 @@
 + 安装
 
 ```shell
-composer require quansitech/qscmf-topbutton-export
+composer require quansitech/antd-admin-table-action-export
 npm i --save https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
 ```
 
